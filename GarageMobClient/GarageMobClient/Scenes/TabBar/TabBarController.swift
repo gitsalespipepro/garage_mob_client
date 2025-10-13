@@ -56,7 +56,11 @@ private extension TabBarViewController {
     }
     
     func setupTabBar() {
-        self.tabBar.isHidden = true
+        if #available(iOS 18.0, *) {
+            self.setTabBarHidden(true, animated: false)
+        } else {
+            self.tabBar.isHidden = true
+        }
         self.view.addSubview(self.customTabBar)
         self.customTabBar.snp.makeConstraints { make in
             make.leading.equalToSuperview()
@@ -135,7 +139,11 @@ extension TabBarViewController: UINavigationControllerDelegate {
         willShow viewController: UIViewController,
         animated: Bool
     ) {
-        self.tabBar.isHidden = true
+        if #available(iOS 18.0, *) {
+            self.setTabBarHidden(true, animated: false)
+        } else {
+            self.tabBar.isHidden = true
+        }
         if viewController.hidesBottomBarWhenPushed {
             self.customTabBar.isHidden = true
         } else {
