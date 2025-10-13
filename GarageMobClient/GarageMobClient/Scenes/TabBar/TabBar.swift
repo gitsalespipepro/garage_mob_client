@@ -103,7 +103,7 @@ private extension TabBar {
     }
     
     func setupUI() {
-        self.backgroundColor = .gray
+        self.backgroundColor = Asset.Colors.f5F5F5.color
         
         self.addSubview(self.stack)
         self.stack.snp.makeConstraints { make in

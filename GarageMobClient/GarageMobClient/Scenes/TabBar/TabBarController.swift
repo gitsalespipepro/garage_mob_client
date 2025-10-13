@@ -67,7 +67,7 @@ private extension TabBarViewController {
         
         // add bottom line view to fill the space under tab bar
         let bottomLineView = UIView()
-        bottomLineView.backgroundColor = .gray
+        bottomLineView.backgroundColor = Asset.Colors.f5F5F5.color
         self.view.addSubview(bottomLineView)
         bottomLineView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview()

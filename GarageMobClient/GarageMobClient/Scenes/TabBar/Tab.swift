@@ -29,26 +29,26 @@ enum Tab {
     var image: UIImage? {
         switch self {
         case .main:
-            return UIImage(named: "tab_main_idle")
+            return Asset.Images.tabMainIdle.image
         case .appointmentList:
-            return UIImage(named: "tab_list_idle")
+            return Asset.Images.tabListIdle.image
         case .contact:
-            return UIImage(named: "tab_contact_idle")
+            return Asset.Images.tabContactIdle.image
         case .profile:
-            return UIImage(named: "tab_profile_idle")
+            return Asset.Images.tabProfileIdle.image
         }
     }
     
     var selectedImage: UIImage? {
         switch self {
         case .main:
-            return UIImage(named: "tab_main_selected")
+            return Asset.Images.tabMainSelected.image
         case .appointmentList:
-            return UIImage(named: "tab_list_selected")
+            return Asset.Images.tabListSelected.image
         case .contact:
-            return UIImage(named: "tab_contact_selected")
+            return Asset.Images.tabContactSelected.image
         case .profile:
-            return UIImage(named: "tab_profile_selected")
+            return Asset.Images.tabProfileSelected.image
         }
     }
 }
