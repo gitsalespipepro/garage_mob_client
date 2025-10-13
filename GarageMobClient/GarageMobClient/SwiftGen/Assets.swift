@@ -30,6 +30,9 @@ internal enum Asset {
   }
   internal enum Images {
     internal static let accentColor = ColorAsset(name: "AccentColor")
+    internal static let chatMessages = ImageAsset(name: "Chat, Messages")
+    internal static let emailsLetterMail = ImageAsset(name: "Emails, Letter, Mail")
+    internal static let phoneChatMessagesBubble = ImageAsset(name: "Phone, Chat, Messages, Bubble")
     internal static let tabContactIdle = ImageAsset(name: "tab_contact_idle")
     internal static let tabContactSelected = ImageAsset(name: "tab_contact_selected")
     internal static let tabListIdle = ImageAsset(name: "tab_list_idle")
@@ -38,6 +41,7 @@ internal enum Asset {
     internal static let tabMainSelected = ImageAsset(name: "tab_main_selected")
     internal static let tabProfileIdle = ImageAsset(name: "tab_profile_idle")
     internal static let tabProfileSelected = ImageAsset(name: "tab_profile_selected")
+    internal static let penEdit = ImageAsset(name: "pen_edit")
   }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

@@ -29,7 +29,7 @@
                                 <constraint firstAttribute="height" constant="50" id="S4x-bN-A71"/>
                             </constraints>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="envelope" catalog="system" title="Email">
+                            <buttonConfiguration key="configuration" style="plain" image="Emails, Letter, Mail" title="Email" imagePadding="8" titleAlignment="automatic">
                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
                         </button>
@@ -40,7 +40,7 @@
                                 <constraint firstAttribute="height" constant="50" id="V9f-OS-Ugf"/>
                             </constraints>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="phone" catalog="system" title="Phone">
+                            <buttonConfiguration key="configuration" style="plain" image="Phone, Chat, Messages, Bubble" title="Phone" imagePadding="8">
                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
                         </button>
@@ -51,7 +51,7 @@
                                 <constraint firstAttribute="height" constant="50" id="9Hi-Z8-lGK"/>
                             </constraints>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="bell" catalog="system" title="SMS">
+                            <buttonConfiguration key="configuration" style="plain" image="Chat, Messages" title="SMS" imagePadding="8">
                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
                         </button>
@@ -72,9 +72,9 @@
         </view>
     </objects>
     <resources>
-        <image name="bell" catalog="system" width="125" height="128"/>
-        <image name="envelope" catalog="system" width="128" height="85"/>
-        <image name="phone" catalog="system" width="128" height="115"/>
+        <image name="Chat, Messages" width="24" height="24"/>
+        <image name="Emails, Letter, Mail" width="24" height="24"/>
+        <image name="Phone, Chat, Messages, Bubble" width="24" height="24"/>
         <namedColor name="018FD7">
             <color red="0.0039215686274509803" green="0.5607843137254902" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
