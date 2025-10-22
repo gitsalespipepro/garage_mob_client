@@ -32,6 +32,7 @@ internal enum Asset {
     internal static let accentColor = ColorAsset(name: "AccentColor")
     internal static let chatMessages = ImageAsset(name: "Chat, Messages")
     internal static let emailsLetterMail = ImageAsset(name: "Emails, Letter, Mail")
+    internal static let logIn = ImageAsset(name: "Log in")
     internal static let phoneChatMessagesBubble = ImageAsset(name: "Phone, Chat, Messages, Bubble")
     internal static let tabContactIdle = ImageAsset(name: "tab_contact_idle")
     internal static let tabContactSelected = ImageAsset(name: "tab_contact_selected")

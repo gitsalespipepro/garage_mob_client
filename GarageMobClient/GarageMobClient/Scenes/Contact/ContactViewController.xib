@@ -28,6 +28,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="S4x-bN-A71"/>
                             </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" image="Emails, Letter, Mail" title="Email" imagePadding="8" titleAlignment="automatic">
                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -39,6 +40,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="V9f-OS-Ugf"/>
                             </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" image="Phone, Chat, Messages, Bubble" title="Phone" imagePadding="8">
                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,6 +52,7 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="9Hi-Z8-lGK"/>
                             </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" image="Chat, Messages" title="SMS" imagePadding="8">
                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
