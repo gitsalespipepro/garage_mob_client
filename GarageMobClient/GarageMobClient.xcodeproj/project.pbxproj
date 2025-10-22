@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		685B66DC2EA66DDF003E87E3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 685B66DB2EA66DDF003E87E3 /* IQKeyboardManagerSwift */; };
 		68C729602E9D39F8004C9181 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 68C7295F2E9D39F8004C9181 /* SnapKit */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68C729602E9D39F8004C9181 /* SnapKit in Frameworks */,
+				685B66DC2EA66DDF003E87E3 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,7 @@
 			name = GarageMobClient;
 			packageProductDependencies = (
 				68C7295F2E9D39F8004C9181 /* SnapKit */,
+				685B66DB2EA66DDF003E87E3 /* IQKeyboardManagerSwift */,
 			);
 			productName = GarageMobClient;
 			productReference = 68C7293B2E9D386B004C9181 /* GarageMobClient.app */;
@@ -116,6 +119,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				68C7295E2E9D39F8004C9181 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				685B66DA2EA66DDF003E87E3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 68C7293C2E9D386B004C9181 /* Products */;
@@ -376,6 +380,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		685B66DA2EA66DDF003E87E3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.1;
+			};
+		};
 		68C7295E2E9D39F8004C9181 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -387,6 +399,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		685B66DB2EA66DDF003E87E3 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 685B66DA2EA66DDF003E87E3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
 		68C7295F2E9D39F8004C9181 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 68C7295E2E9D39F8004C9181 /* XCRemoteSwiftPackageReference "SnapKit" */;
