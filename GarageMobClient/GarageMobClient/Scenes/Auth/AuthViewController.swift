@@ -7,11 +7,21 @@
 //
 
 import UIKit
+import SnapKit
 import Combine
+import AuthenticationServices
 
 final class AuthViewController: UIViewController {
     
     // MARK: Subviews
+    @IBOutlet private weak var appleAuthButtonContainer: UIView!
+    private lazy var appleAuthButton: ASAuthorizationAppleIDButton = {
+        let button = ASAuthorizationAppleIDButton(
+            type: .continue,
+            style: .black
+        )
+        return button
+    }()
 
     // MARK: Other properties
     private var viewModel: IAuthViewModel?
@@ -43,7 +53,10 @@ private extension AuthViewController {
     }
     
     func setupUI() {
-        // do initial ui setup here
+        appleAuthButtonContainer.addSubview(appleAuthButton)
+        appleAuthButton.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
     }
     
     func setupSubscriptions() {

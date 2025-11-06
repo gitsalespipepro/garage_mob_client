@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthViewController">
             <connections>
+                <outlet property="appleAuthButtonContainer" destination="XJh-IL-zin" id="zZh-gH-cnR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,10 +22,25 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Log in" translatesAutoresizingMaskIntoConstraints="NO" id="Q9K-pi-uUd">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vdI-TY-Dmr">
+                    <rect key="frame" x="56.666666666666657" y="396" width="280" height="60"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJh-IL-zin">
+                            <rect key="frame" x="0.0" y="0.0" width="280" height="60"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="280" id="C6x-mW-70T"/>
+                                <constraint firstAttribute="height" constant="60" id="khj-Wj-8Mp"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="vdI-TY-Dmr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1lY-Yn-Mpg"/>
+                <constraint firstItem="vdI-TY-Dmr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="1tN-eh-f4f"/>
                 <constraint firstAttribute="trailing" secondItem="Q9K-pi-uUd" secondAttribute="trailing" id="2gY-M8-0Q7"/>
                 <constraint firstAttribute="bottom" secondItem="Q9K-pi-uUd" secondAttribute="bottom" id="Dk5-vO-fKQ"/>
                 <constraint firstItem="Q9K-pi-uUd" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="G1c-RK-sme"/>
