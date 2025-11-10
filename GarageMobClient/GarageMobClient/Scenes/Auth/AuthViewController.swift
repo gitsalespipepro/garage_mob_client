@@ -20,6 +20,11 @@ final class AuthViewController: UIViewController {
             type: .continue,
             style: .black
         )
+        button.addTarget(
+            self,
+            action: #selector(onAppleAuthButtonTap),
+            for: .touchUpInside
+        )
         return button
     }()
 
@@ -111,5 +116,49 @@ private extension AuthViewController {
 
 // MARK: - Private
 private extension AuthViewController {
+    
+    @objc
+    func onAppleAuthButtonTap() {
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        let request = appleIDProvider.createRequest()
+        request.requestedScopes = [.fullName, .email] // Request full name and email
+        
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = self
+//        authorizationController.presentationContextProvider = self
+        authorizationController.performRequests()
+    }
+}
 
+// MARK: - ASAuthorizationControllerDelegate
+extension AuthViewController: ASAuthorizationControllerDelegate {
+    func authorizationController(
+        controller: ASAuthorizationController,
+        didCompleteWithAuthorization authorization: ASAuthorization
+    ) {
+        print("Authorization successful")
+        
+        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            // **This is where you handle the ASAuthorizationAppleIDCredential**
+            let userIdentifier = appleIDCredential.user
+            let fullName = appleIDCredential.fullName
+            let email = appleIDCredential.email
+            let identityToken = appleIDCredential.identityToken
+            let authorizationCode = appleIDCredential.authorizationCode
+            
+            // Use the credential information to sign the user in to your app/backend service
+            // Note: Full name and email are only provided on the *first* sign-in.
+            // You should save this information securely (e.g., to your server or the keychain) for future use.
+            print("User ID: \(userIdentifier)")
+            print("Email: \(email ?? "")")
+        }
+    }
+    
+    func authorizationController(
+        controller: ASAuthorizationController,
+        didCompleteWithError error: Error
+    ) {
+        // Handle error here (e.g., user dismissed the login prompt)
+        print("Sign in with Apple failed: \(error.localizedDescription)")
+    }
 }

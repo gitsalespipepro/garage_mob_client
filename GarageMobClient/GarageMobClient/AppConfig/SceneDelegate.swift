@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.makeKeyAndVisible()
         
-        let viewController = Auth.Assembly.createModule()//TabBarViewController()
+        let viewController = TabBarViewController()
         window?.rootViewController = viewController
     }
 
