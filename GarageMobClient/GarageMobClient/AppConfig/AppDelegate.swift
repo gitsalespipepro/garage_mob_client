@@ -6,20 +6,13 @@
 //
 
 import UIKit
-import IQKeyboardManagerSwift
-import IQKeyboardToolbarManager
+final class AppDelegate: NSObject, UIApplicationDelegate {
 
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        // IQKeyboardManager
-        IQKeyboardManager.shared.isEnabled = true
-        IQKeyboardManager.shared.resignOnTouchOutside = true
-        IQKeyboardToolbarManager.shared.isEnabled = true
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) -> Bool {
         
         return true
     }
 }
-
