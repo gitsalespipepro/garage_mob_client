@@ -29,18 +29,17 @@ internal enum Asset {
     internal static let f5F5F5 = ColorAsset(name: "F5F5F5")
   }
   internal enum Images {
-    internal static let accentColor = ColorAsset(name: "AccentColor")
     internal static let chatMessages = ImageAsset(name: "Chat, Messages")
     internal static let emailsLetterMail = ImageAsset(name: "Emails, Letter, Mail")
     internal static let logIn = ImageAsset(name: "Log in")
     internal static let phoneChatMessagesBubble = ImageAsset(name: "Phone, Chat, Messages, Bubble")
-    internal static let tabContactIdle = ImageAsset(name: "tab_contact_idle")
+    internal static let tabContactDeselected = ImageAsset(name: "tab_contact_deselected")
     internal static let tabContactSelected = ImageAsset(name: "tab_contact_selected")
-    internal static let tabListIdle = ImageAsset(name: "tab_list_idle")
+    internal static let tabListDeselected = ImageAsset(name: "tab_list_deselected")
     internal static let tabListSelected = ImageAsset(name: "tab_list_selected")
-    internal static let tabMainIdle = ImageAsset(name: "tab_main_idle")
+    internal static let tabMainDeselected = ImageAsset(name: "tab_main_deselected")
     internal static let tabMainSelected = ImageAsset(name: "tab_main_selected")
-    internal static let tabProfileIdle = ImageAsset(name: "tab_profile_idle")
+    internal static let tabProfileDeselected = ImageAsset(name: "tab_profile_deselected")
     internal static let tabProfileSelected = ImageAsset(name: "tab_profile_selected")
     internal static let penEdit = ImageAsset(name: "pen_edit")
   }
