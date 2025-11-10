@@ -13,9 +13,8 @@ struct GarageMobClientApp: App {
 
     var body: some Scene {
         WindowGroup {
-            GCTabBarView()
+            TabBarView()
                 .ignoresSafeArea()
         }
     }
 }
-

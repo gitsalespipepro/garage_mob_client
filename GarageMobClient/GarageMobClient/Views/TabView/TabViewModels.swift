@@ -1,13 +1,13 @@
 //
-//  GCTabBarModels.swift
+//  GCTabViewModels.swift
 //  GarageMobClient
 //
 //  Created by Rezo Joglidze on 11.11.25.
 //
 
-import UIKit
+import SwiftUI
 
-enum TabBarModels {
+enum TabViewModels {
     enum TabBarItem: CaseIterable {
         case main
         case appointments
@@ -27,34 +27,34 @@ enum TabBarModels {
             }
         }
         
-        var selectedIcon: UIImage? {
+        var selectedIcon: Image {
             let image = switch self {
             case .main:
-                UIImage(named: "tab_main_selected")
+                Image("tab_main_selected")
             case .appointments:
-                UIImage(named: "tab_list_selected")
+                Image("tab_list_selected")
             case .contact:
-                UIImage(named: "tab_contact_selected")
+                Image("tab_contact_selected")
             case .profile:
-                UIImage(named: "tab_profile_selected")
+                Image("tab_profile_selected")
             }
             
-            return image?.withRenderingMode(.alwaysOriginal)
+            return image.renderingMode(.original)
         }
         
-        var deselectedIcon: UIImage? {
+        var deselectedIcon: Image {
             let image = switch self {
             case .main:
-                UIImage(named: "tab_main_deselected")
+                Image("tab_main_deselected")
             case .appointments:
-                UIImage(named: "tab_list_deselected")
+                Image("tab_list_deselected")
             case .contact:
-                UIImage(named: "tab_contact_deselected")
+                Image("tab_contact_deselected")
             case .profile:
-                UIImage(named: "tab_profile_deselected")
+                Image("tab_profile_deselected")
             }
             
-            return image?.withRenderingMode(.alwaysOriginal)
+            return image.renderingMode(.original)
         }
     }
 }
