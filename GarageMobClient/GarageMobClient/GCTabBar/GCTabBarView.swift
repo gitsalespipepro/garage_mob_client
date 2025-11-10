@@ -13,7 +13,6 @@ struct GCTabBarView: UIViewControllerRepresentable {
     }
 
     func updateUIViewController(_ uiViewController: GCTabBarController, context: Context) {
-        // No updates needed
-        print("dadsadasda")
+        // Called when SwiftUI’s state changes and you need to update the UIKit view
     }
 }

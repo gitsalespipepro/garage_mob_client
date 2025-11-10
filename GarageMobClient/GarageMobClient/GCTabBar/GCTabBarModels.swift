@@ -27,43 +27,34 @@ enum TabBarModels {
             }
         }
         
-        var imageName: String {
-            switch self {
-            case .main:
-                return "house.fill"
-            case .appointments:
-                return "list.bullet.rectangle"
-            case .contact:
-                return "message"
-            case .profile:
-                return "person.crop.circle"
-            }
-        }
-        
         var selectedIcon: UIImage? {
-            switch self {
+            let image = switch self {
             case .main:
-                return UIImage(named: "tab_main_selected")
+                UIImage(named: "tab_main_selected")
             case .appointments:
-                return UIImage(named: "tab_list_selected")
+                UIImage(named: "tab_list_selected")
             case .contact:
-                return UIImage(named: "tab_contact_selected")
+                UIImage(named: "tab_contact_selected")
             case .profile:
-                return UIImage(named: "tab_profile_selected")
+                UIImage(named: "tab_profile_selected")
             }
+            
+            return image?.withRenderingMode(.alwaysOriginal)
         }
         
         var deselectedIcon: UIImage? {
-            switch self {
+            let image = switch self {
             case .main:
-                return UIImage(named: "tab_main_deselected")
+                UIImage(named: "tab_main_deselected")
             case .appointments:
-                return UIImage(named: "tab_list_deselected")
+                UIImage(named: "tab_list_deselected")
             case .contact:
-                return UIImage(named: "tab_contact_deselected")
+                UIImage(named: "tab_contact_deselected")
             case .profile:
-                return UIImage(named: "tab_profile_deselected")
+                UIImage(named: "tab_profile_deselected")
             }
+            
+            return image?.withRenderingMode(.alwaysOriginal)
         }
     }
 }

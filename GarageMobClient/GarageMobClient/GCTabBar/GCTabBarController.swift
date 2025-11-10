@@ -8,7 +8,6 @@
 import SwiftUI
 
 final class GCTabBarController: UITabBarController {
-//    var coordinators: [Coordinator] = []
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -20,26 +19,35 @@ final class GCTabBarController: UITabBarController {
     
     private func setupTabBarController() {
         viewControllers = TabBarModels.TabBarItem.allCases.map { item in
-            let navigationController = UINavigationController()
-            let tabBarItem = UITabBarItem(title: item.title, image: item.deselectedIcon, selectedImage: item.selectedIcon)
-
+            let rootController = self.makeHostingController(for: item)
+            let navigationController = UINavigationController(rootViewController: rootController)
+            let tabBarItem = UITabBarItem(
+                title: item.title,
+                image: item.deselectedIcon,
+                selectedImage: item.selectedIcon
+            )
             navigationController.tabBarItem = tabBarItem
-
-            setupCoordinator(for: item, with: navigationController)
-
             return navigationController
         }
-        tabBar.tintColor = .clear
+        tabBar.backgroundColor = .white
     }
 
-    private func setupCoordinator(for item: TabBarModels.TabBarItem, with navigationController: UINavigationController) {
-//        let coordinator = switch item {
-//        case .home: DashboardCoordinator(navigationController: navigationController, legacyRouter: legacyRouters.transfersRouter)
-//        case .offers: OffersCoordinator(navigationController: navigationController)
-//        case .menu: MenuCoordinator(navigationController: navigationController)
-//        }
-//        coordinators.append(coordinator)
-//        coordinator.start()
+    private func makeHostingController(for item: TabBarModels.TabBarItem) -> UIViewController {
+        let view: AnyView = {
+            switch item {
+            case .main:
+                return AnyView(MainView())
+            case .appointments:
+                return AnyView(AppointmentsView())
+            case .contact:
+                return AnyView(ContactView())
+            case .profile:
+                return AnyView(ProfileView())
+            }
+        }()
+
+        let hostingController = UIHostingController(rootView: view)
+        return hostingController
     }
 }
 
