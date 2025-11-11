@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #  IconsSwiftGen.sh
-#  LibertyMobileBank
+#  GarageMobClient
 #
 #  Created by Rezo Joglidze on 11.11.25.
 
