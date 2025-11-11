@@ -162,7 +162,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PROJECT_DIR}/swiftgen/bin/swiftgen\"\n";
+			shellScript = "\"${PROJECT_DIR}/GarageMobClient/Scripts/MainSwiftGen.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
