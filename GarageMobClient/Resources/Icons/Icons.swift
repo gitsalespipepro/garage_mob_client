@@ -11,7 +11,7 @@ import SwiftUI
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum Icons {
-  public static let iconPenEdit = ImageAsset(name: "icon_pen_edit")
+  public static let sas = ImageAsset(name: "Sas")
   public static let iconPhone = ImageAsset(name: "icon_phone")
   public static let logInBackground = ImageAsset(name: "log_in_background")
   public static let iconContactDeselected = ImageAsset(name: "icon_contact_deselected")

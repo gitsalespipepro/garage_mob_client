@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		682124AF2EBCF87000BA2DCA /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 682124AE2EBCF87000BA2DCA /* AuthenticationServices.framework */; };
+		A9328CD42EC3B9F2006AEEC8 /* GarageBackend in Frameworks */ = {isa = PBXBuildFile; productRef = A9328CD32EC3B9F2006AEEC8 /* GarageBackend */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,11 @@
 			path = GarageMobClient;
 			sourceTree = "<group>";
 		};
+		A9328CD12EC3B3DD006AEEC8 /* SwiftPackages */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = SwiftPackages;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9328CD42EC3B9F2006AEEC8 /* GarageBackend in Frameworks */,
 				682124AF2EBCF87000BA2DCA /* AuthenticationServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				68C7293D2E9D386B004C9181 /* GarageMobClient */,
+				A9328CD02EC3B3B1006AEEC8 /* Libraries */,
 				682124AD2EBCF87000BA2DCA /* Frameworks */,
 				68C7293C2E9D386B004C9181 /* Products */,
 			);
@@ -71,6 +79,14 @@
 				68C7293B2E9D386B004C9181 /* GarageMobClient.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A9328CD02EC3B3B1006AEEC8 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A9328CD12EC3B3DD006AEEC8 /* SwiftPackages */,
+			);
+			path = Libraries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +110,7 @@
 			);
 			name = GarageMobClient;
 			packageProductDependencies = (
+				A9328CD32EC3B9F2006AEEC8 /* GarageBackend */,
 			);
 			productName = GarageMobClient;
 			productReference = 68C7293B2E9D386B004C9181 /* GarageMobClient.app */;
@@ -304,6 +321,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -360,6 +378,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 6.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -386,6 +405,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A9328CD32EC3B9F2006AEEC8 /* GarageBackend */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GarageBackend;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 68C729332E9D386B004C9181 /* Project object */;
 }
