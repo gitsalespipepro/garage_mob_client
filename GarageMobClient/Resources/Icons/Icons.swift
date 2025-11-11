@@ -11,21 +11,17 @@ import SwiftUI
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum Icons {
-  public static let accentColor = ColorAsset(name: "AccentColor")
-  public static let chatMessages = ImageAsset(name: "Chat, Messages")
-  public static let emailsLetterMail = ImageAsset(name: "Emails, Letter, Mail")
-  public static let logIn = ImageAsset(name: "Log in")
-  public static let phoneChatMessagesBubble = ImageAsset(name: "Phone, Chat, Messages, Bubble")
-  public static let tabContactDeselected = ImageAsset(name: "tab_contact_deselected")
-  public static let tabContactSelected = ImageAsset(name: "tab_contact_selected")
-  public static let tabListDeselected = ImageAsset(name: "tab_list_deselected")
-  public static let tabListSelected = ImageAsset(name: "tab_list_selected")
-  public static let tabMainDeselected = ImageAsset(name: "tab_main_deselected")
-  public static let tabMainSelected = ImageAsset(name: "tab_main_selected")
-  public static let tabProfileDeselected = ImageAsset(name: "tab_profile_deselected")
-  public static let tabProfileSelected = ImageAsset(name: "tab_profile_selected")
-  public static let iconPhone = ImageAsset(name: "icon-phone")
-  public static let penEdit = ImageAsset(name: "pen_edit")
+  public static let iconPenEdit = ImageAsset(name: "icon_pen_edit")
+  public static let iconPhone = ImageAsset(name: "icon_phone")
+  public static let logInBackground = ImageAsset(name: "log_in_background")
+  public static let iconContactDeselected = ImageAsset(name: "icon_contact_deselected")
+  public static let iconContactSelected = ImageAsset(name: "icon_contact_selected")
+  public static let iconListDeselected = ImageAsset(name: "icon_list_deselected")
+  public static let iconListSelected = ImageAsset(name: "icon_list_selected")
+  public static let iconMainDeselected = ImageAsset(name: "icon_main_deselected")
+  public static let iconMainSelected = ImageAsset(name: "icon_main_selected")
+  public static let iconProfileDeselected = ImageAsset(name: "icon_profile_deselected")
+  public static let iconProfileSelected = ImageAsset(name: "icon_profile_selected")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 
