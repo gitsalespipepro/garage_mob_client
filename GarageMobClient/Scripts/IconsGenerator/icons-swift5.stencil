@@ -100,12 +100,20 @@ public struct ImageAsset {
     }
 
     // SwiftUI
+    #if SWIFT_PACKAGE
     public var image: Image { .init(name, bundle: .module) }
+    #else
+    public var image: Image { .init(name) }
+    #endif
     public var originalImage: Image { image.renderingMode(.original) }
     public var templateImage: Image { image.renderingMode(.template) }
 
     // UIKit
+    #if SWIFT_PACKAGE
     public var uiImage: UIImage? { .init(named: name, in: .module, compatibleWith: nil) }
+    #else
+    public var uiImage: UIImage? { .init(named: name) }
+    #endif
 }
 {% else %}
 // No assets found

@@ -13,6 +13,11 @@ echo
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 # Generate Icons.swift
-cd "$SCRIPT_DIR/IconsGenerator"
-chmod u+x IconsSwiftGen.sh
-./IconsSwiftGen.sh
+ICON_SCRIPT="$SCRIPT_DIR/IconsGenerator/IconsSwiftGen.sh"
+if [ ! -f "$ICON_SCRIPT" ]; then
+  echo "IconsSwiftGen script not found at $ICON_SCRIPT"
+  exit 1
+fi
+
+chmod u+x "$ICON_SCRIPT"
+"$ICON_SCRIPT"
