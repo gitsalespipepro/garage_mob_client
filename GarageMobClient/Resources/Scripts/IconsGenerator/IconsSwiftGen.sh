@@ -36,7 +36,7 @@ if [ ! -f "$CONFIG_PATH" ]; then
   exit 1
 fi
 
-RESOURCES_DIR="$(cd "$SCRIPT_DIR/../.." 2>/dev/null && pwd)/Resources"
+RESOURCES_DIR="$(cd "$SCRIPT_DIR/../.." 2>/dev/null && pwd)"
 ICON_ASSETS_DIR="$RESOURCES_DIR/Icons/Icons.xcassets"
 if [ ! -d "$ICON_ASSETS_DIR" ]; then
   echo "Icon asset catalogue not found at $ICON_ASSETS_DIR. Skipping icons generation."

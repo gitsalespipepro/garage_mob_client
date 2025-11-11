@@ -1,8 +1,8 @@
 
 xcassets:
-  inputs: ../../Resources/Icons/Icons.xcassets
+  inputs: ../../Icons/Icons.xcassets
   outputs:
     templatePath: icons-swift5.stencil
-    output: ../../Resources/Icons/Icons.swift
+    output: ../../Icons/Icons.swift
     params:
       enumName: Icons
