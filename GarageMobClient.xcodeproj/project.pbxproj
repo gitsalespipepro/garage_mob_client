@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		682124AF2EBCF87000BA2DCA /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 682124AE2EBCF87000BA2DCA /* AuthenticationServices.framework */; };
 		A9328CD42EC3B9F2006AEEC8 /* GarageBackend in Frameworks */ = {isa = PBXBuildFile; productRef = A9328CD32EC3B9F2006AEEC8 /* GarageBackend */; };
+		A9E706652EC3C88E001EE84B /* GarageFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = A9E706642EC3C88E001EE84B /* GarageFoundation */; };
+		A9E706672EC3C891001EE84B /* GarageModels in Frameworks */ = {isa = PBXBuildFile; productRef = A9E706662EC3C891001EE84B /* GarageModels */; };
+		A9E706692EC3C895001EE84B /* GarageServices in Frameworks */ = {isa = PBXBuildFile; productRef = A9E706682EC3C895001EE84B /* GarageServices */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 			files = (
 				A9328CD42EC3B9F2006AEEC8 /* GarageBackend in Frameworks */,
 				682124AF2EBCF87000BA2DCA /* AuthenticationServices.framework in Frameworks */,
+				A9E706692EC3C895001EE84B /* GarageServices in Frameworks */,
+				A9E706652EC3C88E001EE84B /* GarageFoundation in Frameworks */,
+				A9E706672EC3C891001EE84B /* GarageModels in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +117,9 @@
 			name = GarageMobClient;
 			packageProductDependencies = (
 				A9328CD32EC3B9F2006AEEC8 /* GarageBackend */,
+				A9E706642EC3C88E001EE84B /* GarageFoundation */,
+				A9E706662EC3C891001EE84B /* GarageModels */,
+				A9E706682EC3C895001EE84B /* GarageServices */,
 			);
 			productName = GarageMobClient;
 			productReference = 68C7293B2E9D386B004C9181 /* GarageMobClient.app */;
@@ -410,6 +419,18 @@
 		A9328CD32EC3B9F2006AEEC8 /* GarageBackend */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = GarageBackend;
+		};
+		A9E706642EC3C88E001EE84B /* GarageFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GarageFoundation;
+		};
+		A9E706662EC3C891001EE84B /* GarageModels */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GarageModels;
+		};
+		A9E706682EC3C895001EE84B /* GarageServices */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GarageServices;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

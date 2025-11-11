@@ -22,7 +22,7 @@ struct GarageMobClientApp: App {
     
     var body: some Scene {
         WindowGroup {
-            AuthView()
+            TabBarView()
                 .ignoresSafeArea()
         }
     }
