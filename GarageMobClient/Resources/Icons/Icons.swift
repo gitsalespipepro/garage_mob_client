@@ -11,6 +11,7 @@ import SwiftUI
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 public enum Icons {
+  public static let accentColor = ColorAsset(name: "AccentColor")
   public static let chatMessages = ImageAsset(name: "Chat, Messages")
   public static let emailsLetterMail = ImageAsset(name: "Emails, Letter, Mail")
   public static let logIn = ImageAsset(name: "Log in")
