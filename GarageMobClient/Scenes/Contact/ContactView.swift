@@ -17,10 +17,9 @@ struct ContactView: View {
 
     var body: some View {
         ZStack {
-            Color.blue
+            Color.blue.ignoresSafeArea()
             Text("ContactView")
                 .font(.headline)
         }
     }
 }
-
