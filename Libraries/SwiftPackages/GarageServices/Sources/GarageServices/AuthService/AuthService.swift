@@ -9,11 +9,13 @@ import GarageModels
 import GarageBackend
 
 public struct AuthServiceURLs {
-    static let googleAuth =  "https://garage-mob.spp.dev/api/auth/google/callback"
+    static let googleAuth = "https://garage-mob.spp.dev/api/auth/google/callback"
+    static let appleAuth = "https://garage-mob.spp.dev/api/auth/apple/callback"
 }
 
 public protocol AuthService {
     func googleAuth(model: GoogleAuthRequestModel) async throws -> AuthResponseModel
+    func appleAuth(model: AppleAuthRequestModel) async throws -> AuthResponseModel
 }
 
 public final class AuthServiceImpl {
@@ -26,8 +28,25 @@ public final class AuthServiceImpl {
 }
 
 extension AuthServiceImpl: AuthService {
+    
     public func googleAuth(model: GoogleAuthRequestModel) async throws -> AuthResponseModel {
         let url = AuthServiceURLs.googleAuth
+        
+        let query = (try? model.propertyValueEncodedTuples())?
+            .map { QueryParameter(name: $0.property, value: $0.value) }
+        
+        return try await coreService.request(
+            url: url,
+            method: .post,
+            headers: nil,
+            query: query,
+            body: nil,
+            encoding: .json
+        ).responseDecodable()
+    }
+    
+    public func appleAuth(model: AppleAuthRequestModel) async throws -> AuthResponseModel {
+        let url = AuthServiceURLs.appleAuth
         
         let query = (try? model.propertyValueEncodedTuples())?
             .map { QueryParameter(name: $0.property, value: $0.value) }
