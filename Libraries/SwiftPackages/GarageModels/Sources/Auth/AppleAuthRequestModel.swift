@@ -8,5 +8,6 @@
 import GarageFoundation
 
 public struct AppleAuthRequestModel: PropertyValueTuplable {
+    
     public let idToken: String
 }
