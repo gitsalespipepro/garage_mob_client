@@ -47,3 +47,30 @@ extension OdooServiceImpl: OdooService {
         ).responseDecodable()
     }
 }
+
+// MARK: - Usage Example
+fileprivate struct OdooProxyExampleRequest: Encodable {
+    let param1: Int
+    let param2: Bool
+}
+
+fileprivate struct OdooProxyExampleResponse: Decodable {
+    let field1: String
+    let field2: String
+}
+
+fileprivate func exampleUsage() {
+    let service = OdooServiceImpl(coreService: CoreServiceImpl())
+    Task {
+        do {
+            let requestModel = OdooProxyRequestModel(
+                url: "/some/odoo/endpoint",
+                body: OdooProxyExampleRequest(param1: 123, param2: true)
+            )
+            let response: OdooProxyExampleResponse = try await service.odooProxy(model: requestModel)
+            print("✅ Got response:", response)
+        } catch {
+            print("❌ Error:", error)
+        }
+    }
+}

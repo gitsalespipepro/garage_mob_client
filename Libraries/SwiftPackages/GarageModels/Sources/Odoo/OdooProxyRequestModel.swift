@@ -9,6 +9,11 @@ import GarageFoundation
 
 public struct OdooProxyRequestModel<Body: Encodable>: PropertyValueTuplable {
     
-    let url: String
-    let body: Body
+    public let url: String
+    public let body: Body
+    
+    public init(url: String, body: Body) {
+            self.url = url
+            self.body = body
+        }
 }
