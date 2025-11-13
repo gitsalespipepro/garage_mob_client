@@ -12,6 +12,9 @@ public struct ClientServiceURLs {
     static func updateClient(id: Int) -> String {
         "https://garage-mob.spp.dev/api/clients/\(id)"
     }
+    static func getClientById(id: Int) -> String {
+        "https://garage-mob.spp.dev/api/clients/\(id)"
+    }
 }
 
 public protocol ClientService {
@@ -19,6 +22,7 @@ public protocol ClientService {
         id: Int,
         model: UpdateClientRequestModel
     ) async throws -> ClientModel
+    func getClientById(id: Int) async throws -> ClientModel
 }
 
 public final class ClientServiceImpl {
@@ -43,9 +47,22 @@ extension ClientServiceImpl: ClientService {
         
         return try await coreService.request(
             url: url,
-            method: .post,
+            method: .put,
             headers: nil,
             query: query,
+            body: nil,
+            encoding: .json
+        ).responseDecodable()
+    }
+    
+    public func getClientById(id: Int) async throws -> ClientModel {
+        let url = ClientServiceURLs.getClientById(id: id)
+        
+        return try await coreService.request(
+            url: url,
+            method: .get,
+            headers: nil,
+            query: nil,
             body: nil,
             encoding: .json
         ).responseDecodable()
