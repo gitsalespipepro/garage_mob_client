@@ -13,7 +13,7 @@ public struct OdooProxyRequestModel<Body: Encodable>: PropertyValueTuplable {
     public let body: Body
     
     public init(url: String, body: Body) {
-            self.url = url
-            self.body = body
-        }
+        self.url = url
+        self.body = body
+    }
 }
