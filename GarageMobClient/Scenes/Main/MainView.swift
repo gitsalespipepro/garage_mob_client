@@ -37,25 +37,7 @@ struct MainView: View {
     private var developersView: some View {
         ScrollView(content: {
             VStack(spacing: 10) {
-                ForEach(
-                    viewModel.developers,
-                    id: \.id,
-                    content: {
-                        person in
-                        
-                        HStack {
-                            Image(systemName: "swift")
-                                .resizable()
-                                .frame(width: 50, height: 50)
-                            
-                            Spacer().frame(width: 25)
-                            
-                            Text(person.company)
-                            
-                            Spacer()
-                        }
-                    }
-                )
+                
             }
         })
     }
