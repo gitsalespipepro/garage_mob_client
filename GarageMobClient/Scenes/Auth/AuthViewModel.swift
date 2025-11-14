@@ -7,7 +7,26 @@
 //
 
 import Combine
+import AuthenticationServices
 
 final class AuthViewModel: ObservableObject {
     
+    // MARK: Continue with Apple
+    func handleContinueWithApple(with authorization: ASAuthorization) {
+        if let userCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            print(userCredential.user)
+            
+            if userCredential.authorizedScopes.contains(.fullName) {
+                print(userCredential.fullName?.givenName ?? "No given name")
+            }
+            
+            if userCredential.authorizedScopes.contains(.email) {
+                print(userCredential.email ?? "No email")
+            }
+        }
+    }
+    
+    func handleContinueWithApple(with error: Error) {
+        print("Could not authenticate: \(error.localizedDescription)")
+    }
 }

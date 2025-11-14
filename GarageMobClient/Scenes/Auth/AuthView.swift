@@ -179,9 +179,9 @@ struct AuthView: View {
         } onCompletion: { result in
             switch result {
             case .success(let authorization):
-                handleSuccessfulLogin(with: authorization)
+                viewModel.handleContinueWithApple(with: authorization)
             case .failure(let error):
-                handleLoginError(with: error)
+                viewModel.handleContinueWithApple(with: error)
             }
         }
         .frame(height: 50)
@@ -197,25 +197,6 @@ struct AuthView: View {
             + Text("Privacy policy")
                 .underline()
         )
-    }
-    
-    // MARK: Handling
-    private func handleSuccessfulLogin(with authorization: ASAuthorization) {
-        if let userCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
-            print(userCredential.user)
-            
-            if userCredential.authorizedScopes.contains(.fullName) {
-                print(userCredential.fullName?.givenName ?? "No given name")
-            }
-            
-            if userCredential.authorizedScopes.contains(.email) {
-                print(userCredential.email ?? "No email")
-            }
-        }
-    }
-    
-    private func handleLoginError(with error: Error) {
-        print("Could not authenticate: \\(error.localizedDescription)")
     }
 }
 
