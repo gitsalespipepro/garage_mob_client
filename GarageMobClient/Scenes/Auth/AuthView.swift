@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 struct AuthView: View {
     @StateObject private var viewModel: AuthViewModel
@@ -50,7 +51,11 @@ struct AuthView: View {
             signInPromptView
             
             Spacer().frame(height: 42)
-            signUpButton
+            
+            VStack {
+                signUpButton
+                continueWithAppleButton
+            }
             
             Spacer()
             
@@ -168,6 +173,19 @@ struct AuthView: View {
         .foregroundColor(.white)
     }
     
+    private var continueWithAppleButton: some View {
+        SignInWithAppleButton(.continue) { request in
+            request.requestedScopes = [.fullName, .email]
+        } onCompletion: { result in
+            switch result {
+            case .success(let authorization):
+                handleSuccessfulLogin(with: authorization)
+            case .failure(let error):
+                handleLoginError(with: error)
+            }
+        }
+        .frame(height: 50)
+    }
     
     // MARK: Footer View
     private var termsAndPolicyText: some View {
@@ -179,6 +197,25 @@ struct AuthView: View {
             + Text("Privacy policy")
                 .underline()
         )
+    }
+    
+    // MARK: Handling
+    private func handleSuccessfulLogin(with authorization: ASAuthorization) {
+        if let userCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            print(userCredential.user)
+            
+            if userCredential.authorizedScopes.contains(.fullName) {
+                print(userCredential.fullName?.givenName ?? "No given name")
+            }
+            
+            if userCredential.authorizedScopes.contains(.email) {
+                print(userCredential.email ?? "No email")
+            }
+        }
+    }
+    
+    private func handleLoginError(with error: Error) {
+        print("Could not authenticate: \\(error.localizedDescription)")
     }
 }
 
