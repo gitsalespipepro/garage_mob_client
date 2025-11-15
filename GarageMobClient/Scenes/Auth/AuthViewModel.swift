@@ -6,8 +6,9 @@
 //  Copyright © 2025 ___ORGANIZATIONNAME___ All rights reserved.
 //
 
-import Combine
+import SwiftUI
 
-final class AuthViewModel: ObservableObject {
+@Observable
+final class AuthViewModel {
     
 }

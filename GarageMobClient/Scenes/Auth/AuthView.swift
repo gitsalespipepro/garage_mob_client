@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct AuthView: View {
-    @StateObject private var viewModel: AuthViewModel
+    private var viewModel: AuthViewModel
     @State private var email: String = ""
     @State private var password: String = ""
     @FocusState private var focusedField: Field?
@@ -19,7 +19,7 @@ struct AuthView: View {
     }
     
     init() {
-        _viewModel = StateObject(wrappedValue: AuthViewModel())
+        self.viewModel = AuthViewModel()
     }
     
     var body: some View {

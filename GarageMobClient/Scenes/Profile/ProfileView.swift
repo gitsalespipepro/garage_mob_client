@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ProfileView: View {
     
-    @StateObject private var viewModel: ProfileViewModel
+    private var viewModel: ProfileViewModel
     
     init(viewModel: ProfileViewModel = ProfileViewModel()) {
-        _viewModel = StateObject(wrappedValue: viewModel)
+        self.viewModel = viewModel
     }
     
     var body: some View {
@@ -23,4 +23,3 @@ struct ProfileView: View {
         }
     }
 }
-

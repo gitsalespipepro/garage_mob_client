@@ -9,10 +9,10 @@ import SwiftUI
 
 struct AppointmentsView: View {
 
-    @StateObject private var viewModel: AppointmentsViewModel
+     private var viewModel: AppointmentsViewModel
 
     init(viewModel: AppointmentsViewModel = AppointmentsViewModel()) {
-        _viewModel = StateObject(wrappedValue: viewModel)
+        self.viewModel = viewModel
     }
 
     var body: some View {

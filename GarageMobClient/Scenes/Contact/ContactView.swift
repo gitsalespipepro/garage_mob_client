@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ContactView: View {
 
-    @StateObject private var viewModel: ContactViewModel
+    private var viewModel: ContactViewModel
 
     init(viewModel: ContactViewModel = ContactViewModel()) {
-        _viewModel = StateObject(wrappedValue: viewModel)
+        self.viewModel = viewModel
     }
 
     var body: some View {

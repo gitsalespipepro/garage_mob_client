@@ -9,6 +9,7 @@
 import Foundation
 import Combine
 
-final class AppointmentsViewModel: ObservableObject {
+@Observable
+final class AppointmentsViewModel {
     
 }
